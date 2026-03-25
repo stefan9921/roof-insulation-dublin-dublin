@@ -33,11 +33,11 @@ const testimonials = [
 ];
 
 const faqs = [
-  "How long does an attic insulation installation take?",
-  "Can I still use my attic for storage?",
-  "What SEAI grants are available for insulation?",
-  "Does your company handle the grant paperwork?",
-  "What is the life expectancy of the insulation?",
+  { q: "How long does an attic insulation installation take?", a: "Most attic insulation projects are completed in a single day. For a standard semi-detached house, the work typically takes 3-5 hours with minimal disruption to your daily routine." },
+  { q: "Can I still use my attic for storage?", a: "Yes! We can install raised flooring or attic stilts that sit above the insulation layers, allowing you to store items without compressing the materials and reducing their effectiveness." },
+  { q: "What SEAI grants are available for insulation?", a: "SEAI offers grants for attic insulation (up to €1,500), cavity wall insulation (up to €700), and external wall insulation (up to €6,000). The exact amount depends on your home type and the measures installed." },
+  { q: "Does your company handle the grant paperwork?", a: "As SEAI Registered Contractors, we handle all the technical paperwork for you. We guide you through the application process, provide the required BER assessments, and ensure all certification is completed." },
+  { q: "What is the life expectancy of the insulation?", a: "High-quality mineral wool insulation can last 80-100 years. Spray foam insulation typically lasts 50+ years. We recommend a check-up every 15-20 years to ensure settling hasn't reduced thermal efficiency." },
 ];
 
 export default function HomePage() {
@@ -226,13 +226,14 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-headline font-extrabold text-on-surface text-center mb-16">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {faqs.map((q) => (
-              <div key={q} className="bg-surface rounded-xl border border-outline-variant/20 overflow-hidden">
-                <button className="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-on-surface">
-                  {q}
-                  <span className="material-symbols-outlined">expand_more</span>
-                </button>
-              </div>
+            {faqs.map((faq) => (
+              <details key={faq.q} className="group bg-surface rounded-xl border border-outline-variant/20 overflow-hidden">
+                <summary className="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-on-surface cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                  {faq.q}
+                  <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <p className="px-6 pb-5 text-on-surface-variant leading-relaxed">{faq.a}</p>
+              </details>
             ))}
           </div>
         </div>
