@@ -2,8 +2,12 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HeroContactForm from "../../components/HeroContactForm";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import { generateServiceSchema, generateFAQSchema } from "../../components/SchemaMarkup";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
 
 const servicesData: Record<string, {
   title: string; h1: string; metaTitle: string; metaDesc: string;
@@ -168,7 +172,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const s = servicesData[slug];
   if (!s) return {};
-  return { title: s.metaTitle, description: s.metaDesc };
+  return {
+    title: s.metaTitle,
+    description: s.metaDesc,
+    openGraph: {
+      title: s.metaTitle,
+      description: s.metaDesc,
+      url: `${baseUrl}/services/${slug}`,
+      type: "website",
+    },
+    alternates: { canonical: `${baseUrl}/services/${slug}` },
+  };
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -176,8 +190,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const s = servicesData[slug];
   if (!s) notFound();
 
+  const serviceSchema = generateServiceSchema(s.title, s.metaDesc, `${baseUrl}/services/${slug}`);
+  const faqSchema = generateFAQSchema(s.faqs.map(f => ({ q: f.q, a: f.a })));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
@@ -216,6 +235,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         </section>
+
+        <Breadcrumbs items={[{ name: "Services", href: "/services" }, { name: s.title, href: `/services/${slug}` }]} />
 
         {/* Why Section */}
         <section className="py-24 bg-[#f3f3f3]">

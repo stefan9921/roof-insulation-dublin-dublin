@@ -2,6 +2,8 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HeroContactForm from "../../components/HeroContactForm";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import { generateFAQSchema } from "../../components/SchemaMarkup";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -128,11 +130,23 @@ export function generateStaticParams() {
   return Object.keys(areasData).map((slug) => ({ slug }));
 }
 
+const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const a = areasData[slug];
   if (!a) return {};
-  return { title: a.metaTitle, description: a.metaDesc };
+  return {
+    title: a.metaTitle,
+    description: a.metaDesc,
+    openGraph: {
+      title: a.metaTitle,
+      description: a.metaDesc,
+      url: `${baseUrl}/areas/${slug}`,
+      type: "website",
+    },
+    alternates: { canonical: `${baseUrl}/areas/${slug}` },
+  };
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -140,8 +154,11 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const a = areasData[slug];
   if (!a) notFound();
 
+  const faqSchema = generateFAQSchema(a.faqs.map(f => ({ q: f.q, a: f.a })));
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center pt-20 overflow-hidden">
@@ -166,6 +183,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </section>
+
+      <Breadcrumbs items={[{ name: "Areas", href: "/areas" }, { name: a.name, href: `/areas/${slug}` }]} />
 
       {/* Local Info */}
       <section className="py-24 bg-surface">

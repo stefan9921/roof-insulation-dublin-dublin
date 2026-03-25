@@ -2,11 +2,21 @@ import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroContactForm from "./components/HeroContactForm";
+import { generateFAQSchema } from "./components/SchemaMarkup";
 import type { Metadata } from "next";
+
+const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
 
 export const metadata: Metadata = {
   title: "Attic & Roof Insulation Dublin | Expert Installers | Free Quote",
   description: "Leading attic and roof insulation specialists in Dublin. SEAI grant approved. Get a free quote for loft, attic & roof insulation. Call +35312308892.",
+  openGraph: {
+    title: "Attic & Roof Insulation Dublin | Expert Installers | Free Quote",
+    description: "Leading attic and roof insulation specialists in Dublin. SEAI grant approved. Get a free quote for loft, attic & roof insulation.",
+    url: baseUrl,
+    type: "website",
+  },
+  alternates: { canonical: baseUrl },
 };
 
 const services = [
@@ -42,8 +52,10 @@ const faqs = [
 ];
 
 export default function HomePage() {
+  const faqSchema = generateFAQSchema(faqs.map(f => ({ q: f.q, a: f.a })));
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-pale-sage">

@@ -6,6 +6,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Roof Insulation Dublin | Your Trusted Insulation Partner",
   description: "Learn about Roof Insulation Dublin — experienced insulation contractors serving Dublin and surrounding areas. SEAI registered.",
+  openGraph: {
+    title: "About Roof Insulation Dublin | Your Trusted Insulation Partner",
+    description: "Learn about Roof Insulation Dublin — experienced insulation contractors serving Dublin and surrounding areas. SEAI registered.",
+    url: "https://roof-insulation-dublin-dublin.vercel.app/about",
+    type: "website",
+  },
+  alternates: { canonical: "https://roof-insulation-dublin-dublin.vercel.app/about" },
 };
 
 export default function AboutPage() {
