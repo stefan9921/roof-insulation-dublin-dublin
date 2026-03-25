@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import HeroContactForm from "./components/HeroContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -69,10 +70,8 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img alt="Attic insulation installation" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPGyhiTIMv6DcNKye4Jn8uGPyht6UyUoqdnPGQ7-XnyYUQeXmtSVUN7-bezIMN9cvS5eAFIjoXdRk9JkdNHTdvVug24X01I73q0ij0UvS5nJ4uW2oAMScrjJBtk2_Hvl5ZIvkO30niAIkzwJN-P9zN7BmuQYZYP9-xadVk2rfpfh8QXWoQS3OYdQC284naKWn0jr75pIlRJ3rTcz_TIZqdcC2_fvY6knvvMpD9nQI-WsyylKytB_TfcZ4_f1dWtNRTG3XfDX2jTj8" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs">
+            <HeroContactForm />
+            <div className="hidden absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs">
               <div className="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center text-primary">
                 <span className="material-symbols-outlined">energy_savings_leaf</span>
               </div>

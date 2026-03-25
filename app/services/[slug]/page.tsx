@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeroContactForm from "../../components/HeroContactForm";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -186,22 +187,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="absolute inset-0 bg-gradient-to-r from-[#1a1c1c]/90 via-[#1a1c1c]/40 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-            <div className="max-w-2xl space-y-6">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold text-sm tracking-wide uppercase">
-                <span className="material-symbols-outlined text-sm mr-2" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                SEAI Grant Approved
-              </span>
-              <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-white leading-tight tracking-tighter">
-                {s.h1}
-              </h1>
-              <p className="text-xl text-white/90 max-w-xl font-medium">
-                Professional {s.title.toLowerCase()} by Dublin&apos;s leading experts. Save up to 30% on energy bills and access generous SEAI grants today.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link href="/contact" className="bg-primary-container text-on-primary px-8 py-4 rounded font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-                  Get Free Quote
-                </Link>
-                <div className="flex items-center gap-6 text-white/90">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div className="space-y-6">
+                <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold text-sm tracking-wide uppercase">
+                  <span className="material-symbols-outlined text-sm mr-2" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                  SEAI Grant Approved
+                </span>
+                <h1 className="text-4xl md:text-5xl font-headline font-extrabold text-white leading-tight tracking-tighter">
+                  {s.h1}
+                </h1>
+                <p className="text-lg text-white/90 max-w-xl font-medium">
+                  Professional {s.title.toLowerCase()} by Dublin&apos;s leading experts. Save up to 30% on energy bills and access generous SEAI grants today.
+                </p>
+                <div className="flex items-center gap-6 text-white/90 pt-2">
                   <div className="flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-container">verified</span>
                     <span className="text-sm font-bold">SEAI Approved</span>
@@ -211,6 +209,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <span className="text-sm font-bold">15+ Years Experience</span>
                   </div>
                 </div>
+              </div>
+              <div className="hidden lg:block">
+                <HeroContactForm />
               </div>
             </div>
           </div>

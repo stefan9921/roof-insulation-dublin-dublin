@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeroContactForm from "../../components/HeroContactForm";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -149,18 +150,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1c1c]/80 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-20">
-          <div className="max-w-2xl space-y-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-sm uppercase tracking-wider">
-              Serving {a.name} &amp; Surrounding Areas
-            </span>
-            <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
-              {a.h1}
-            </h1>
-            <p className="text-xl text-zinc-200 max-w-lg leading-relaxed font-light">{a.subtext}</p>
-            <div className="pt-4">
-              <Link href="/contact" className="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-lg inline-block">
-                Get a Free Quote
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-sm uppercase tracking-wider">
+                Serving {a.name} &amp; Surrounding Areas
+              </span>
+              <h1 className="text-4xl lg:text-5xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+                {a.h1}
+              </h1>
+              <p className="text-lg text-zinc-200 max-w-lg leading-relaxed font-light">{a.subtext}</p>
+            </div>
+            <div className="hidden lg:block">
+              <HeroContactForm />
             </div>
           </div>
         </div>
