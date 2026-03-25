@@ -11,8 +11,8 @@ export default function Header() {
           Roof Insulation Dublin
         </Link>
         <div className="hidden md:flex items-center space-x-8">
-          <Link href="/services/attic-insulation" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Services</Link>
-          <Link href="/areas/drogheda" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Areas We Serve</Link>
+          <Link href="/services" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Services</Link>
+          <Link href="/areas" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Areas We Serve</Link>
           <Link href="/about" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">About</Link>
           <Link href="/contact" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Contact</Link>
         </div>
@@ -28,8 +28,8 @@ export default function Header() {
       </div>
       {menuOpen && (
         <div className="md:hidden bg-white border-t px-6 py-4 space-y-4">
-          <Link href="/services/attic-insulation" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link href="/areas/drogheda" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>Areas We Serve</Link>
+          <Link href="/services" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>Services</Link>
+          <Link href="/areas" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>Areas We Serve</Link>
           <Link href="/about" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/contact" className="block text-slate-700 font-medium" onClick={() => setMenuOpen(false)}>Contact</Link>
         </div>
