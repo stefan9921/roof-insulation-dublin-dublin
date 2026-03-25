@@ -7,8 +7,8 @@ export default function Header() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-        <Link href="/" className="text-xl font-black tracking-tight text-slate-900 font-headline">
-          Roof Insulation Dublin
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo.svg" alt="Roof Insulation Dublin" className="h-10" />
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link href="/" className="text-slate-700 hover:text-orange-500 transition-colors font-medium">Home</Link>
