@@ -198,7 +198,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               </h1>
               <p className="text-lg text-zinc-200 max-w-lg leading-relaxed font-light">{a.subtext}</p>
             </div>
-            <div className="hidden lg:block">
+            <div>
               <HeroContactForm />
             </div>
           </div>

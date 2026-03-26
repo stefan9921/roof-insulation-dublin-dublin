@@ -255,7 +255,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:block">
+              <div>
                 <HeroContactForm />
               </div>
             </div>
