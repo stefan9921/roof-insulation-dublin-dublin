@@ -11,6 +11,7 @@ const areasData: Record<string, {
   name: string; metaTitle: string; metaDesc: string;
   h1: string; heroImg: string; subtext: string;
   whyTitle: string; whyText: string[];
+  contentHtml: string;
   stats: { value: string; label: string }[];
   localImg: string;
   testimonial: { text: string; name: string; location: string };
@@ -28,6 +29,10 @@ const areasData: Record<string, {
       "With years of experience across County Louth, we understand the specific architectural needs of Drogheda's diverse housing stock—from heritage properties near the Boyne to modern developments.",
       "Our team specializes in significantly improving your home's BER rating, leading to an average reduction in energy consumption by over 30%.",
     ],
+    contentHtml: `<h2>Insulation Options for Drogheda Homeowners</h2>
+<p>Drogheda's mix of older terraces near the Boyne and modern estates in Grange Rath means different insulation solutions work for different homes. For most properties, <a href="/services/attic-insulation">attic insulation</a> is the best starting point—it's quick, affordable, and delivers immediate warmth improvements.</p>
+<p>Older Drogheda homes with solid walls benefit hugely from <a href="/services/external-wall-insulation">external wall insulation</a>, which also gives the exterior a fresh look. Newer estates typically have cavity walls that can be filled in just a few hours with <a href="/services/cavity-wall-insulation">cavity wall insulation</a>. For converted attics in period homes, <a href="/services/spray-foam-insulation">spray foam insulation</a> provides the best airtight seal.</p>
+<p>We also serve nearby areas including <a href="/areas/navan">Navan</a> and <a href="/areas/swords">Swords</a>. Check our <a href="/services/home-insulation">home insulation & grants page</a> for full SEAI funding details, or <a href="/contact">request a free survey</a>.</p>`,
     stats: [{ value: "98%", label: "Client Satisfaction" }, { value: "€400+", label: "Avg. Annual Savings" }],
     localImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjfTIJ7_eYXf0RMG1wm-uFK5g_lV-XH0lJ17yx-TjoesYzYx2BEdmZsxxtDWxxWAccip0bLnZHZKJtv1VDiB-P1zE6Al3_wUvksPgkfPikgqMDJrkub10R3j4Jwm53d_PFfp1dp6LD3yYPs4UWh1e3DxM4sD8oYYjp1L8MBLjQdQn8CSE6KiRXTfdm7M8cMyEPKfPO1HHRFojvxAW0flFsUsNAr9PD_eV-TPDoJUO75haMSs4MW9yYwMjbeAS6iBeaRuuM1gclAgE",
     testimonial: { text: "Excellent service from start to finish in Drogheda. The team was punctual, tidy, and our home felt noticeably warmer within 24 hours.", name: "Ciarán O'Reilly", location: "Grange Rath, Drogheda" },
@@ -50,6 +55,10 @@ const areasData: Record<string, {
       "Swords is one of the fastest-growing towns in Ireland, with a mix of new-build estates and established neighbourhoods. We understand the insulation needs of both.",
       "From Rivervalley to Holywell, our team has insulated hundreds of homes across Swords, delivering consistent quality and excellent customer satisfaction.",
     ],
+    contentHtml: `<h2>Insulation Services Available in Swords</h2>
+<p>Swords has a wide mix of housing—from 1970s estates in Rivervalley to new-builds in Applewood. For most Swords homes, <a href="/services/attic-insulation">attic insulation</a> is the quickest win, stopping heat from escaping through the roof and cutting energy bills within days of installation.</p>
+<p>Many homes in Swords' older estates have unfilled cavity walls. <a href="/services/cavity-wall-insulation">Cavity wall insulation</a> can be completed in just a few hours with no disruption inside your home. For properties without cavities, <a href="/services/external-wall-insulation">external wall insulation</a> wraps your home in a thermal blanket while giving it a fresh exterior.</p>
+<p>If you've converted your attic into a living space, <a href="/services/roof-insulation">roof insulation</a> at rafter level is essential. <a href="/services/spray-foam-insulation">Spray foam</a> is particularly effective for this. We also cover <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/bray">Bray</a>, and <a href="/areas/navan">Navan</a>. See our <a href="/services/home-insulation">SEAI grants guide</a> or <a href="/contact">book a free survey</a>.</p>`,
     stats: [{ value: "500+", label: "Homes Insulated" }, { value: "€350+", label: "Avg. Annual Savings" }],
     localImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjfTIJ7_eYXf0RMG1wm-uFK5g_lV-XH0lJ17yx-TjoesYzYx2BEdmZsxxtDWxxWAccip0bLnZHZKJtv1VDiB-P1zE6Al3_wUvksPgkfPikgqMDJrkub10R3j4Jwm53d_PFfp1dp6LD3yYPs4UWh1e3DxM4sD8oYYjp1L8MBLjQdQn8CSE6KiRXTfdm7M8cMyEPKfPO1HHRFojvxAW0flFsUsNAr9PD_eV-TPDoJUO75haMSs4MW9yYwMjbeAS6iBeaRuuM1gclAgE",
     testimonial: { text: "Brilliant work on our attic in Swords. The team were clean, efficient, and the house is noticeably warmer.", name: "Mark D.", location: "Swords, Co. Dublin" },
@@ -71,6 +80,10 @@ const areasData: Record<string, {
       "Bray's coastal location means homes face unique challenges from wind and moisture. Proper insulation is essential for both warmth and protecting your property.",
       "We've worked extensively across Bray, from the seafront Victorian terraces to the newer estates in Southern Cross and Fassaroe.",
     ],
+    contentHtml: `<h2>Insulation Solutions for Bray & North Wicklow</h2>
+<p>Bray's coastal location brings specific challenges—sea air, wind exposure, and moisture can all affect your home's thermal performance. <a href="/services/attic-insulation">Attic insulation</a> is the first line of defence, preventing heat from rising out through the roof. For Bray's older Victorian terraces near the seafront, <a href="/services/external-wall-insulation">external wall insulation</a> is often the best option for solid walls.</p>
+<p>Newer homes in Southern Cross and Fassaroe typically have cavity walls that can benefit from <a href="/services/cavity-wall-insulation">cavity wall insulation</a>—a quick, affordable upgrade completed in hours. For the ultimate protection against Bray's coastal conditions, <a href="/services/spray-foam-insulation">spray foam insulation</a> provides an airtight, moisture-resistant barrier.</p>
+<p>We also serve <a href="/areas/swords">Swords</a>, <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/navan">Navan</a>, and <a href="/areas/mullingar">Mullingar</a>. Visit our <a href="/services/home-insulation">grants page</a> for SEAI funding information, or <a href="/contact">contact us for a free survey</a>.</p>`,
     stats: [{ value: "300+", label: "Bray Homes Done" }, { value: "30%", label: "Avg. Heat Loss Reduction" }],
     localImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjfTIJ7_eYXf0RMG1wm-uFK5g_lV-XH0lJ17yx-TjoesYzYx2BEdmZsxxtDWxxWAccip0bLnZHZKJtv1VDiB-P1zE6Al3_wUvksPgkfPikgqMDJrkub10R3j4Jwm53d_PFfp1dp6LD3yYPs4UWh1e3DxM4sD8oYYjp1L8MBLjQdQn8CSE6KiRXTfdm7M8cMyEPKfPO1HHRFojvxAW0flFsUsNAr9PD_eV-TPDoJUO75haMSs4MW9yYwMjbeAS6iBeaRuuM1gclAgE",
     testimonial: { text: "Living by the sea in Bray, our house was always cold. The insulation made a massive difference to our comfort and bills.", name: "David R.", location: "Bray, Co. Wicklow" },
@@ -92,6 +105,10 @@ const areasData: Record<string, {
       "Navan has seen significant residential growth over the past two decades. Many of these homes were built to minimum insulation standards that no longer meet today's energy efficiency expectations.",
       "We help Navan homeowners upgrade their insulation to modern standards, reducing energy bills and improving comfort year-round.",
     ],
+    contentHtml: `<h2>Insulation for Navan & County Meath</h2>
+<p>Many Navan homes built during the Celtic Tiger era were insulated to minimum standards that don't meet today's expectations. Upgrading your <a href="/services/attic-insulation">attic insulation</a> is the fastest way to make a noticeable difference—most jobs are done in a single morning.</p>
+<p>For homes with cavity walls (most built after the 1930s), <a href="/services/cavity-wall-insulation">cavity wall insulation</a> is a quick and affordable addition. Older properties with solid walls will benefit from <a href="/services/external-wall-insulation">external wall insulation</a>, which also refreshes the exterior appearance. If you're looking for the highest-performing solution, <a href="/services/spray-foam-insulation">spray foam insulation</a> creates a seamless airtight barrier.</p>
+<p>We work across Meath and beyond, covering <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/swords">Swords</a>, <a href="/areas/mullingar">Mullingar</a>, and <a href="/areas/bray">Bray</a>. See our <a href="/services/home-insulation">home insulation & grants guide</a> for SEAI funding details, or <a href="/contact">book your free survey</a>.</p>`,
     stats: [{ value: "200+", label: "Meath Homes Done" }, { value: "€380+", label: "Avg. Annual Savings" }],
     localImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjfTIJ7_eYXf0RMG1wm-uFK5g_lV-XH0lJ17yx-TjoesYzYx2BEdmZsxxtDWxxWAccip0bLnZHZKJtv1VDiB-P1zE6Al3_wUvksPgkfPikgqMDJrkub10R3j4Jwm53d_PFfp1dp6LD3yYPs4UWh1e3DxM4sD8oYYjp1L8MBLjQdQn8CSE6KiRXTfdm7M8cMyEPKfPO1HHRFojvxAW0flFsUsNAr9PD_eV-TPDoJUO75haMSs4MW9yYwMjbeAS6iBeaRuuM1gclAgE",
     testimonial: { text: "Great service in Navan. Professional team and the house is so much warmer now. Highly recommend.", name: "Aoife K.", location: "Navan, Co. Meath" },
@@ -113,6 +130,10 @@ const areasData: Record<string, {
       "Mullingar's inland location means colder winters and higher heating demands. Proper insulation is one of the best investments you can make for your Westmeath home.",
       "Our experienced team has worked on properties throughout Mullingar and the wider Midlands, from period farmhouses to modern estates.",
     ],
+    contentHtml: `<h2>Insulation for Mullingar & Westmeath Homes</h2>
+<p>Mullingar's inland climate means colder winters than coastal Dublin—making proper insulation even more important. <a href="/services/attic-insulation">Attic insulation</a> is the most popular starting point for Mullingar homeowners, delivering immediate warmth and lower bills.</p>
+<p>For older farmhouses and period properties common in the Midlands, <a href="/services/external-wall-insulation">external wall insulation</a> is transformative—it eliminates cold walls and gives the exterior a modern finish. Town homes with cavity walls can be upgraded quickly with <a href="/services/cavity-wall-insulation">cavity wall insulation</a>. For irregular spaces or converted attics, <a href="/services/spray-foam-insulation">spray foam insulation</a> delivers the best seal.</p>
+<p>We cover the full Midlands region as well as <a href="/areas/navan">Navan</a>, <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/swords">Swords</a>, and <a href="/areas/bray">Bray</a>. Learn about SEAI funding on our <a href="/services/home-insulation">home insulation & grants page</a>, or <a href="/contact">get in touch for a free survey</a>.</p>`,
     stats: [{ value: "150+", label: "Westmeath Homes" }, { value: "€420+", label: "Avg. Annual Savings" }],
     localImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjfTIJ7_eYXf0RMG1wm-uFK5g_lV-XH0lJ17yx-TjoesYzYx2BEdmZsxxtDWxxWAccip0bLnZHZKJtv1VDiB-P1zE6Al3_wUvksPgkfPikgqMDJrkub10R3j4Jwm53d_PFfp1dp6LD3yYPs4UWh1e3DxM4sD8oYYjp1L8MBLjQdQn8CSE6KiRXTfdm7M8cMyEPKfPO1HHRFojvxAW0flFsUsNAr9PD_eV-TPDoJUO75haMSs4MW9yYwMjbeAS6iBeaRuuM1gclAgE",
     testimonial: { text: "The insulation has transformed our old farmhouse near Mullingar. So much warmer and our oil bills have dropped significantly.", name: "Padraig M.", location: "Mullingar, Co. Westmeath" },
@@ -212,8 +233,17 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
-      {/* Services */}
+      {/* Content with Internal Links */}
       <section className="py-24 bg-[#f3f3f3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="prose prose-lg max-w-none text-on-surface-variant [&_h2]:text-3xl [&_h2]:font-headline [&_h2]:font-extrabold [&_h2]:text-on-surface [&_h2]:mb-6 [&_p]:mb-6 [&_p]:leading-relaxed [&_a]:text-primary [&_a]:font-semibold [&_a]:underline [&_a]:decoration-primary/30 hover:[&_a]:decoration-primary"
+            dangerouslySetInnerHTML={{ __html: a.contentHtml }}
+          />
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl font-headline font-extrabold text-on-surface">Our Services in {a.name}</h2>

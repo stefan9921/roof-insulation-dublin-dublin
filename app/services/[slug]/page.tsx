@@ -13,6 +13,7 @@ const servicesData: Record<string, {
   title: string; h1: string; metaTitle: string; metaDesc: string;
   heroImg: string; heroAlt: string;
   intro: string[]; benefits: string[];
+  contentHtml: string;
   costTable?: { size: string; cost: string; grant: string; net: string }[];
   faqs: { q: string; a: string }[];
   otherServices: { icon: string; title: string; slug: string; desc: string }[];
@@ -29,6 +30,11 @@ const servicesData: Record<string, {
       "Our premium mineral wool and spray foam solutions create a high-performance thermal envelope, trapping heat where it belongs: inside your living space."
     ],
     benefits: ["Reduce Heat Loss (Up to 30%)", "Lower Energy Bills Permanently", "Quick & Clean Installation", "SEAI Grants Available"],
+    contentHtml: `<h2>Attic Insulation for Dublin Homes</h2>
+<p>Most Dublin homes lose a significant amount of heat through the roof. Whether you live in a period terrace in the city centre or a modern semi-detached in <a href="/areas/swords">Swords</a> or <a href="/areas/bray">Bray</a>, attic insulation is typically the single most cost-effective energy upgrade you can make.</p>
+<p>We use two main methods: mineral wool rolls for standard loft spaces, and <a href="/services/spray-foam-insulation">spray foam insulation</a> for irregular shapes, converted attics, or where an airtight seal is needed. Both are installed by our SEAI-registered team with minimal disruption to your day.</p>
+<p>For the best results, we recommend combining attic insulation with <a href="/services/cavity-wall-insulation">cavity wall insulation</a> or <a href="/services/external-wall-insulation">external wall insulation</a>. A whole-house approach can cut your heating bills by 40-60%—read more on our <a href="/services/home-insulation">home insulation & grants</a> page.</p>
+<p>We serve all areas across Dublin and beyond, including <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/navan">Navan</a>, and <a href="/areas/mullingar">Mullingar</a>. <a href="/contact">Get a free quote</a> today.</p>`,
     costTable: [
       { size: "Small Terraced House", cost: "€1,100", grant: "€800", net: "€300" },
       { size: "Semi-Detached", cost: "€1,800", grant: "€1,200", net: "€600" },
@@ -59,6 +65,10 @@ const servicesData: Record<string, {
       "Our rafter-level insulation solutions are ideal for converted attics, vaulted ceilings, and rooms-in-roof constructions where traditional loft insulation isn't suitable."
     ],
     benefits: ["Ideal for Converted Attics", "Maintains Room Height", "Superior Thermal Performance", "SEAI Grant Eligible"],
+    contentHtml: `<h2>Roof Insulation for Dublin Properties</h2>
+<p>Roof insulation differs from <a href="/services/attic-insulation">attic insulation</a> in one important way: it's installed between or under the rafters rather than on the loft floor. This makes it the right choice for converted attics, rooms in the roof, and vaulted ceilings where you need the space directly under the roof to be warm.</p>
+<p>For maximum performance, many homeowners pair rafter-level insulation with <a href="/services/spray-foam-insulation">spray foam</a>, which provides both thermal and airtight properties in a single application. We also recommend addressing your walls—<a href="/services/external-wall-insulation">external wall insulation</a> or <a href="/services/cavity-wall-insulation">cavity wall insulation</a>—for a complete thermal envelope.</p>
+<p>Our team works across Dublin and surrounding counties, regularly completing projects in <a href="/areas/swords">Swords</a>, <a href="/areas/bray">Bray</a>, <a href="/areas/drogheda">Drogheda</a>, and <a href="/areas/navan">Navan</a>. <a href="/contact">Book your free survey</a> to find out what your home needs.</p>`,
     faqs: [
       { q: "What's the difference between roof and attic insulation?", a: "Attic insulation goes on the floor of your loft. Roof insulation is installed between or under the rafters, making it ideal for converted attics or rooms in the roof." },
       { q: "How long does roof insulation take?", a: "Most residential roof insulation projects take 1-2 days depending on the size and complexity of the roof structure." },
@@ -82,6 +92,10 @@ const servicesData: Record<string, {
       "Whether you have an awkward attic shape, hard-to-reach spaces, or simply want the best thermal performance money can buy, spray foam is the answer."
     ],
     benefits: ["Highest R-Value Per Inch", "Airtight Seal", "Moisture Barrier", "Long-Lasting (50+ Years)"],
+    contentHtml: `<h2>Spray Foam Insulation Across Dublin</h2>
+<p>Spray foam is the premium choice when standard insulation won't cut it. It's particularly effective for <a href="/services/roof-insulation">roof insulation</a> at rafter level, where it bonds directly to the underside of the roof deck, creating a seamless thermal and moisture barrier.</p>
+<p>It also works brilliantly in combination with <a href="/services/attic-insulation">attic insulation</a>—we often use spray foam on tricky gable walls and around pipes, then mineral wool on the main loft floor. For homes with solid walls, pairing spray foam with <a href="/services/external-wall-insulation">external wall insulation</a> gives you the best energy rating possible.</p>
+<p>We install spray foam insulation for homeowners in <a href="/areas/swords">Swords</a>, <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/bray">Bray</a>, <a href="/areas/navan">Navan</a>, and <a href="/areas/mullingar">Mullingar</a>. Check our <a href="/services/home-insulation">grants page</a> to see what SEAI funding you could access, or <a href="/contact">request a free quote</a>.</p>`,
     faqs: [
       { q: "Is spray foam insulation safe?", a: "Yes. Once cured (within 24 hours), spray foam is completely inert and safe. It's used in millions of homes worldwide." },
       { q: "How much does spray foam cost?", a: "Spray foam typically costs more than traditional insulation but offers superior performance. Contact us for a precise quote based on your property." },
@@ -105,6 +119,10 @@ const servicesData: Record<string, {
       "The system also gives your home a fresh, modern appearance with a range of render finishes available in multiple colours."
     ],
     benefits: ["Eliminates Thermal Bridging", "Fresh Exterior Finish", "Major BER Improvement", "Generous SEAI Grants"],
+    contentHtml: `<h2>External Wall Insulation in Dublin</h2>
+<p>External wall insulation (EWI) is the go-to solution for older Dublin homes built with solid walls that have no cavity to fill. Unlike <a href="/services/cavity-wall-insulation">cavity wall insulation</a>, EWI wraps the outside of your home in insulated boards finished with a protective render, eliminating thermal bridging entirely.</p>
+<p>Many homeowners combine EWI with <a href="/services/attic-insulation">attic insulation</a> for maximum impact. When you insulate both the walls and the roof, you create a complete thermal envelope that can boost your BER rating by two or three grades. See our <a href="/services/home-insulation">home insulation & grants guide</a> for the full breakdown of available SEAI funding.</p>
+<p>We carry out external wall insulation projects across Dublin and surrounding areas including <a href="/areas/swords">Swords</a>, <a href="/areas/bray">Bray</a>, <a href="/areas/drogheda">Drogheda</a>, and <a href="/areas/mullingar">Mullingar</a>. <a href="/contact">Contact us</a> for a free survey and quote.</p>`,
     faqs: [
       { q: "How long does external wall insulation take?", a: "A typical semi-detached house takes 7-10 working days, depending on weather conditions and the complexity of the building." },
       { q: "Will it change the look of my house?", a: "Yes—for the better! You can choose from a wide range of render colours and textures to give your home a modern, refreshed appearance." },
@@ -128,6 +146,10 @@ const servicesData: Record<string, {
       "Our bead injection system fills every void completely, and the whole process takes just a few hours with no mess inside your home."
     ],
     benefits: ["Completed in Hours", "No Internal Disruption", "Immediate Warmth Improvement", "Cost-Effective Solution"],
+    contentHtml: `<h2>Cavity Wall Insulation for Dublin Homes</h2>
+<p>If your home was built between the 1930s and early 2000s, there's a good chance it has unfilled cavity walls. Filling these cavities with insulation beads is one of the fastest and most affordable upgrades available. Unlike <a href="/services/external-wall-insulation">external wall insulation</a>, there's no change to your home's appearance—small holes are drilled in the outer mortar, beads are pumped in, and the holes are sealed.</p>
+<p>For the biggest savings, pair cavity wall insulation with <a href="/services/attic-insulation">attic insulation</a>. Together, these two measures can reduce your heating bills by 40% or more. If you also have a converted attic, consider adding <a href="/services/roof-insulation">roof insulation</a> at rafter level.</p>
+<p>We regularly insulate homes in <a href="/areas/swords">Swords</a>, <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/navan">Navan</a>, <a href="/areas/bray">Bray</a>, and <a href="/areas/mullingar">Mullingar</a>. Visit our <a href="/services/home-insulation">home insulation & grants</a> page for SEAI grant details, or <a href="/contact">get in touch</a> for a free survey.</p>`,
     faqs: [
       { q: "How do I know if I have cavity walls?", a: "Most homes built after the 1930s have cavity walls. We can confirm during our free survey by measuring the wall thickness or using a borescope." },
       { q: "How long does it take?", a: "Cavity wall insulation typically takes just 2-4 hours for a standard home. It's one of the quickest insulation upgrades available." },
@@ -151,6 +173,10 @@ const servicesData: Record<string, {
       "We specialise in helping Dublin homeowners navigate the SEAI Better Energy Home grants, ensuring you get the maximum financial support for your insulation upgrade."
     ],
     benefits: ["Whole-Home Approach", "Maximum Grant Assistance", "Single Contractor Convenience", "Best Overall Savings"],
+    contentHtml: `<h2>Complete Home Insulation & SEAI Grants</h2>
+<p>The most effective way to insulate your home is to address everything at once. Start with <a href="/services/attic-insulation">attic insulation</a> to stop heat rising through the roof, then tackle your walls with either <a href="/services/cavity-wall-insulation">cavity wall insulation</a> (for homes with cavities) or <a href="/services/external-wall-insulation">external wall insulation</a> (for solid-wall properties).</p>
+<p>For converted attics and vaulted ceilings, <a href="/services/roof-insulation">roof insulation</a> at rafter level keeps the room directly under the roof comfortable. And if you want the ultimate airtight seal, <a href="/services/spray-foam-insulation">spray foam insulation</a> delivers the highest R-value per inch of any material on the market.</p>
+<p>SEAI grants cover a significant portion of the cost. As SEAI Registered Contractors, we handle all the paperwork and guide you through the application. We work with homeowners across Dublin and beyond, including <a href="/areas/swords">Swords</a>, <a href="/areas/drogheda">Drogheda</a>, <a href="/areas/bray">Bray</a>, <a href="/areas/navan">Navan</a>, and <a href="/areas/mullingar">Mullingar</a>. <a href="/contact">Request your free survey</a> today.</p>`,
     faqs: [
       { q: "What SEAI grants are available?", a: "SEAI offers grants for attic insulation, cavity wall, external wall, and internal dry lining. The amounts vary by measure. We'll help you understand exactly what you're eligible for." },
       { q: "Can I do multiple insulation types at once?", a: "Absolutely—and we recommend it. A combined approach gives the best energy savings and may qualify you for higher grant rates under the SEAI scheme." },
@@ -263,8 +289,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        {/* Process */}
+        {/* Content with Internal Links */}
         <section className="py-24 bg-surface">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="prose prose-lg max-w-none text-on-surface-variant [&_h2]:text-3xl [&_h2]:font-headline [&_h2]:font-extrabold [&_h2]:text-on-surface [&_h2]:mb-6 [&_p]:mb-6 [&_p]:leading-relaxed [&_a]:text-primary [&_a]:font-semibold [&_a]:underline [&_a]:decoration-primary/30 hover:[&_a]:decoration-primary"
+              dangerouslySetInnerHTML={{ __html: s.contentHtml }}
+            />
+          </div>
+        </section>
+
+        {/* Process */}
+        <section className="py-24 bg-[#f3f3f3]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl font-headline font-extrabold text-on-surface mb-6">Our 4-Step Installation Process</h2>

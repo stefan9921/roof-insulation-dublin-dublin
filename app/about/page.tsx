@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -20,6 +21,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="pt-24">
+        <Breadcrumbs items={[{ name: "About Us", href: "/about" }]} />
         <section className="py-24 bg-pale-sage">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl">
