@@ -39,9 +39,10 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-4xl font-headline font-extrabold text-on-surface">Our Story</h2>
               <div className="space-y-4 text-on-surface-variant text-lg leading-relaxed">
-                <p>Roof Insulation Dublin was founded with a simple mission: to help Irish homeowners reduce their energy bills and live more comfortably through professional insulation solutions.</p>
-                <p>With over 10 years of experience, our SEAI-registered team has insulated thousands of homes across Dublin and surrounding counties. We take pride in our workmanship, our customer service, and our commitment to using only the highest-quality materials.</p>
-                <p>From our base at 77 Sir John Rogerson&apos;s Quay in Dublin 2, we serve the entire Greater Dublin Area including Drogheda, Swords, Bray, Navan, and Mullingar.</p>
+                <p>Roof Insulation Dublin was founded with a simple mission: to help Irish homeowners reduce their energy bills and live more comfortably through professional insulation solutions. We saw too many Dublin families paying sky-high heating bills because their homes were leaking heat through uninsulated attics, walls, and roofs.</p>
+                <p>With over 10 years of experience, our SEAI-registered team has insulated thousands of homes across Dublin and surrounding counties. We specialise in <Link href="/services/attic-insulation" className="text-primary font-semibold underline">attic insulation</Link>, <Link href="/services/roof-insulation" className="text-primary font-semibold underline">roof insulation</Link>, <Link href="/services/spray-foam-insulation" className="text-primary font-semibold underline">spray foam insulation</Link>, <Link href="/services/external-wall-insulation" className="text-primary font-semibold underline">external wall insulation</Link>, and <Link href="/services/cavity-wall-insulation" className="text-primary font-semibold underline">cavity wall insulation</Link>.</p>
+                <p>We take pride in our workmanship, our customer service, and our commitment to using only the highest-quality, sustainably sourced materials. Every project starts with a free home survey where we identify heat loss areas and recommend the most cost-effective solutions for your property.</p>
+                <p>As SEAI Registered Contractors, we handle all the <Link href="/services/home-insulation" className="text-primary font-semibold underline">grant paperwork</Link> for you, ensuring you receive the maximum SEAI funding available. From our base at 77 Sir John Rogerson&apos;s Quay in Dublin 2, we serve the entire Greater Dublin Area including <Link href="/areas/drogheda" className="text-primary font-semibold underline">Drogheda</Link>, <Link href="/areas/swords" className="text-primary font-semibold underline">Swords</Link>, <Link href="/areas/bray" className="text-primary font-semibold underline">Bray</Link>, <Link href="/areas/navan" className="text-primary font-semibold underline">Navan</Link>, and <Link href="/areas/mullingar" className="text-primary font-semibold underline">Mullingar</Link>.</p>
               </div>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl aspect-video">
@@ -64,6 +65,26 @@ export default function AboutPage() {
                   <span className="material-symbols-outlined text-5xl text-primary-container">{item.icon}</span>
                   <h3 className="text-xl font-bold text-on-surface">{item.title}</h3>
                   <p className="text-on-surface-variant">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 bg-surface-container-lowest">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-headline font-extrabold text-on-surface text-center mb-6">Our Values</h2>
+            <p className="text-center text-on-surface-variant text-lg max-w-2xl mx-auto mb-16">Every decision we make is guided by these core principles.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { icon: "eco", title: "Sustainability", desc: "We use eco-friendly, sustainably sourced insulation materials that reduce carbon emissions and help Ireland meet its climate goals. A well-insulated home is a greener home." },
+                { icon: "precision_manufacturing", title: "Precision", desc: "Every installation is carried out to the highest standards. We measure, assess, and install with meticulous attention to detail, ensuring maximum thermal performance." },
+                { icon: "volunteer_activism", title: "Community", desc: "We're proud to serve communities across Dublin and beyond. We believe every family deserves a warm, energy-efficient home, and we work hard to make insulation accessible through SEAI grant assistance." },
+              ].map((v) => (
+                <div key={v.title} className="bg-surface p-8 rounded-2xl space-y-4 border border-outline-variant/10">
+                  <span className="material-symbols-outlined text-5xl text-primary-container">{v.icon}</span>
+                  <h3 className="text-xl font-bold text-on-surface">{v.title}</h3>
+                  <p className="text-on-surface-variant leading-relaxed">{v.desc}</p>
                 </div>
               ))}
             </div>
