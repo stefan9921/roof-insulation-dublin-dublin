@@ -226,12 +226,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="relative h-[614px] flex items-center overflow-hidden">
+        <section className="relative min-h-[614px] flex items-center overflow-visible lg:overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img alt={s.heroAlt} className="w-full h-full object-cover" src={s.heroImg} />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1a1c1c]/90 via-[#1a1c1c]/40 to-transparent"></div>
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-10 lg:py-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="space-y-6">
                 <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold text-sm tracking-wide uppercase">

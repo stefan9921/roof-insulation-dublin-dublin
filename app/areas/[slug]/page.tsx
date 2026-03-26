@@ -182,7 +182,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
       {/* Hero */}
-      <section className="relative min-h-[600px] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] flex items-center pt-20 overflow-visible lg:overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img alt={`Modern home in ${a.name}`} className="w-full h-full object-cover" src={a.heroImg} />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1c1c]/80 to-transparent"></div>
