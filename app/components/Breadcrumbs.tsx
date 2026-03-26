@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { generateBreadcrumbSchema } from "./SchemaMarkup";
 
-const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+const baseUrl = "https://roofinsulationdublin.ie";
 
 export default function Breadcrumbs({ items }: { items: { name: string; href: string }[] }) {
   const schemaItems = [{ name: "Home", url: baseUrl }, ...items.map((i) => ({ name: i.name, url: `${baseUrl}${i.href}` }))];

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { localBusinessSchema, websiteSchema } from "./components/SchemaMarkup";
 
-const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+const baseUrl = "https://roofinsulationdublin.ie";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

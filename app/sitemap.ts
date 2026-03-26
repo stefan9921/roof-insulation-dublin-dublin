@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+  const baseUrl = "https://roofinsulationdublin.ie";
   const now = new Date().toISOString();
   return [
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },

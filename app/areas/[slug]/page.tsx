@@ -151,7 +151,7 @@ export function generateStaticParams() {
   return Object.keys(areasData).map((slug) => ({ slug }));
 }
 
-const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+const baseUrl = "https://roofinsulationdublin.ie";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

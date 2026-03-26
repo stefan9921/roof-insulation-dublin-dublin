@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Roof Insulation Dublin | Get a Free Quote",
     description: "Get in touch with Roof Insulation Dublin for a free insulation quote. Call +35312308892 or fill out our contact form.",
-    url: "https://roof-insulation-dublin-dublin.vercel.app/contact",
+    url: "https://roofinsulationdublin.ie/contact",
     type: "website",
   },
-  alternates: { canonical: "https://roof-insulation-dublin-dublin.vercel.app/contact" },
+  alternates: { canonical: "https://roofinsulationdublin.ie/contact" },
 };
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

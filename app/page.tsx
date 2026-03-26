@@ -5,7 +5,7 @@ import HeroContactForm from "./components/HeroContactForm";
 import { generateFAQSchema } from "./components/SchemaMarkup";
 import type { Metadata } from "next";
 
-const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+const baseUrl = "https://roofinsulationdublin.ie";
 
 export const metadata: Metadata = {
   title: "Attic & Roof Insulation Dublin | Expert Installers | Free Quote",

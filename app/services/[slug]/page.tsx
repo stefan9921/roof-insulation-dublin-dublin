@@ -7,7 +7,7 @@ import { generateServiceSchema, generateFAQSchema } from "../../components/Schem
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-const baseUrl = "https://roof-insulation-dublin-dublin.vercel.app";
+const baseUrl = "https://roofinsulationdublin.ie";
 
 const servicesData: Record<string, {
   title: string; h1: string; metaTitle: string; metaDesc: string;

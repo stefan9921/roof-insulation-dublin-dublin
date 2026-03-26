@@ -1,12 +1,12 @@
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://roof-insulation-dublin-dublin.vercel.app/#business",
+  "@id": "https://roofinsulationdublin.ie/#business",
   name: "Roof Insulation Dublin",
   image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPGyhiTIMv6DcNKye4Jn8uGPyht6UyUoqdnPGQ7-XnyYUQeXmtSVUN7-bezIMN9cvS5eAFIjoXdRk9JkdNHTdvVug24X01I73q0ij0UvS5nJ4uW2oAMScrjJBtk2_Hvl5ZIvkO30niAIkzwJN-P9zN7BmuQYZYP9-xadVk2rfpfh8QXWoQS3OYdQC284naKWn0jr75pIlRJ3rTcz_TIZqdcC2_fvY6knvvMpD9nQI-WsyylKytB_TfcZ4_f1dWtNRTG3XfDX2jTj8",
   telephone: "+35312308892",
   email: "info@roofinsulationdublin.ie",
-  url: "https://roof-insulation-dublin-dublin.vercel.app",
+  url: "https://roofinsulationdublin.ie",
   address: {
     "@type": "PostalAddress",
     streetAddress: "77 Sir John Rogerson's Quay, Grand Canal Dock",
@@ -35,10 +35,10 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Roof Insulation Dublin",
-  url: "https://roof-insulation-dublin-dublin.vercel.app",
+  url: "https://roofinsulationdublin.ie",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://roof-insulation-dublin-dublin.vercel.app/?q={search_term_string}",
+    target: "https://roofinsulationdublin.ie/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -61,7 +61,7 @@ export function generateServiceSchema(name: string, description: string, url: st
     "@context": "https://schema.org",
     "@type": "Service",
     name, description, url,
-    provider: { "@id": "https://roof-insulation-dublin-dublin.vercel.app/#business" },
+    provider: { "@id": "https://roofinsulationdublin.ie/#business" },
     areaServed: { "@type": "City", name: "Dublin" },
   };
 }

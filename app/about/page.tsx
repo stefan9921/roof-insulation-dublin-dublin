@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Roof Insulation Dublin | Your Trusted Insulation Partner",
     description: "Learn about Roof Insulation Dublin — experienced insulation contractors serving Dublin and surrounding areas. SEAI registered.",
-    url: "https://roof-insulation-dublin-dublin.vercel.app/about",
+    url: "https://roofinsulationdublin.ie/about",
     type: "website",
   },
-  alternates: { canonical: "https://roof-insulation-dublin-dublin.vercel.app/about" },
+  alternates: { canonical: "https://roofinsulationdublin.ie/about" },
 };
 
 export default function AboutPage() {
